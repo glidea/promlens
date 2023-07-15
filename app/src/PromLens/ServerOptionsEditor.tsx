@@ -43,6 +43,8 @@ const ServerOptionsEditor: FC<
         access: 'direct',
         datasourceID: null,
         withCredentials: false,
+        basicAuthUsername: '',
+        basicAuthPassword: '',
       });
     }
   };

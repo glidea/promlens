@@ -156,6 +156,8 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
               datasourceID: null,
               withCredentials: false,
               url: pageConfig.defaultPrometheusURL,
+              basicAuthUsername: '',
+              basicAuthPassword: '',
             })
           );
         }
@@ -187,6 +189,8 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
               datasourceID: null,
               withCredentials: false,
               url: queryParams.s,
+              basicAuthUsername: queryParams.u,
+              basicAuthPassword: queryParams.p,
             })
           );
         }

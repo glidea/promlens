@@ -6,41 +6,25 @@ context('ExpressionInput', () => {
   });
 
   it('types, autocompletes, and submits correctly', () => {
-    cy.get('.expression-input')
-      .click()
-      .type('rat');
+    cy.get('.expression-input').click().type('rat');
 
-    cy.get('.cm-tooltip-autocomplete > ul > li')
-      .contains('rate')
-      .wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
+    cy.get('.cm-tooltip-autocomplete > ul > li').contains('rate').wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
 
-    cy.get('.expression-input')
-      .type('{enter}')
-      .type('(node_cpu');
+    cy.get('.expression-input').type('{enter}').type('(node_cpu');
 
-    cy.get('.cm-tooltip-autocomplete > ul > li')
-      .contains('node_cpu_seconds_total')
-      .wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
+    cy.get('.cm-tooltip-autocomplete > ul > li').contains('node_cpu_seconds_total').wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
 
     cy.get('.expression-input').type('{downarrow}');
 
     cy.get('.cm-tooltip.cm-completionInfo').should('have.text', 'Seconds the cpus spent in each mode.');
 
-    cy.get('.expression-input')
-      .type('{enter}')
-      .type('{mo', { parseSpecialCharSequences: false });
+    cy.get('.expression-input').type('{enter}').type('{mo', { parseSpecialCharSequences: false });
 
-    cy.get('.cm-tooltip-autocomplete > ul > li')
-      .contains('mode')
-      .wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
+    cy.get('.cm-tooltip-autocomplete > ul > li').contains('mode').wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
 
-    cy.get('.expression-input')
-      .type('{enter}')
-      .type('!="id');
+    cy.get('.expression-input').type('{enter}').type('!="id');
 
-    cy.get('.cm-tooltip-autocomplete > ul > li')
-      .contains('idle')
-      .wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
+    cy.get('.cm-tooltip-autocomplete > ul > li').contains('idle').wait(100); // Even when the autocomplete item is already shown, we sometimes have to wait before pressing Enter :(
 
     cy.get('.expression-input')
       .type('{enter}')

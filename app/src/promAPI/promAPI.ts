@@ -38,9 +38,16 @@ export class PromAPI {
       );
     }
 
+    const headers = new Headers();
+    if (this.serverSettings.basicAuthUsername && this.serverSettings.basicAuthPassword) {
+      const base64 = btoa(`${this.serverSettings.basicAuthUsername}:${this.serverSettings.basicAuthPassword}`);
+      headers.append('Authorization', `Basic ${base64}`);
+    }
+
     init = {
       credentials: this.serverSettings.withCredentials ? 'include' : 'same-origin',
       cache: 'no-store',
+      headers: headers,
       ...init,
     };
     return fetch(url, init);

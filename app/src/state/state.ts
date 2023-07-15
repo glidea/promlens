@@ -3,6 +3,8 @@ import RawASTNode from '../promql/ast';
 
 export interface ServerSettings {
   url: string;
+  basicAuthUsername: string;
+  basicAuthPassword: string;
   access: 'proxy' | 'direct';
   datasourceID: number | null;
   withCredentials: boolean;

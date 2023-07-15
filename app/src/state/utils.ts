@@ -15,4 +15,6 @@ export const grafanaDatasourceToServerSettings = (ds: GrafanaDataSourceSettings)
   access: ds.access,
   datasourceID: ds.id,
   withCredentials: ds.withCredentials ? ds.withCredentials : false,
+  basicAuthUsername: '',
+  basicAuthPassword: '',
 });

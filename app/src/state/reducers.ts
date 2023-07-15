@@ -77,6 +77,8 @@ const initialState: AppState = {
     access: 'direct',
     datasourceID: null,
     withCredentials: false,
+    basicAuthUsername: '',
+    basicAuthPassword: '',
   },
   queries: [initialNode],
   queryHistory: {
@@ -446,7 +448,14 @@ const importState = (state: ExportedStateV1 | ExportedStateV2orV3): AppState => 
 
   const serverSettings: ServerSettings =
     state.version === 1
-      ? { url: state.serverURL, access: 'direct', datasourceID: null, withCredentials: false }
+      ? {
+          url: state.serverURL,
+          access: 'direct',
+          datasourceID: null,
+          withCredentials: false,
+          basicAuthUsername: '',
+          basicAuthPassword: '',
+        }
       : state.serverSettings;
 
   if (state.version < 3) {

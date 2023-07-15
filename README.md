@@ -74,6 +74,8 @@ To run PromLens without any advanced features (link sharing, Grafana integration
 
 This starts PromLens on http://localhost:8080/ (you can override this using the `--web.listen-address` flag).
 
+To enable Basic Auth, you need to access a URL like this, http://localhost:8080/?s=your_prometheus_endpoint&u=username&p=passowrd.
+
 To run PromLens with link sharing and Grafana integration enabled, using SQLite for link sharing (note that you will need to provide the `$GRAFANA_URL` and `$GRAFANA_API_KEY` environment variables for this to work):
 
 ```
