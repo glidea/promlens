@@ -90,6 +90,14 @@ const QueryView: FC<QueryViewOwnProps & QueryViewStateProps & QueryViewDispatchP
             if (ast !== null) {
               setTree(queryID, normalizeAST(ast));
             }
+            const url = new URL(window.location.toString());
+            const params = new URLSearchParams(url.search);
+            const queries = params.getAll('q') || [];
+            queries[queryID] = expr;
+            params.delete('q');
+            queries.forEach((query) => params.append('q', query));
+            url.search = params.toString();
+            window.history.pushState({}, '', url.toString());
           }}
         />
         <Button
@@ -108,7 +116,17 @@ const QueryView: FC<QueryViewOwnProps & QueryViewStateProps & QueryViewDispatchP
           size="sm"
           title="Remove query"
           variant="light"
-          onClick={() => deleteQuery(queryID)}
+          onClick={() => {
+            const url = new URL(window.location.toString());
+            const params = new URLSearchParams(url.search);
+            const queries = params.getAll('q') || [];
+            queries.splice(queryID, 1);
+            params.delete('q');
+            queries.forEach((query) => params.append('q', query));
+            url.search = params.toString();
+            window.history.pushState({}, '', url.toString());
+            deleteQuery(queryID);
+          }}
           className="query-top-bar-btn"
         >
           <FaTimes />

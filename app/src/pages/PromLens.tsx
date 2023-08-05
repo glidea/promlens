@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import { Container, Alert } from 'react-bootstrap';
 import { createStore } from 'redux';
-import { importState, setServerSettings, setExpr } from '../state/actions';
+import { importState, setServerSettings, setExpr, addQuery } from '../state/actions';
 import appReducer, { ExportedStateV1, ExportedStateV2orV3 } from '../state/reducers';
 import { Provider } from 'react-redux';
 import PromLensUI from '../PromLens/PromLensUI';
@@ -110,19 +110,26 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
 
   const [stateImportError, setStateImportError] = useState<string | null>(null);
 
-  const queryParams = Object.fromEntries(
+  const queryParams = Array.from(
     window.location.search
       .substring(1)
       .split('&')
       .map((p) => p.split('='))
-      .map(([a, b]) => [a, decodeURIComponent(b)])
-  );
+      .map(([a, b]) => [a, decodeURIComponent((b || '').replace(/\+/g, '%20'))])
+  ).reduce((map, [key, value]) => {
+    if (map.has(key)) {
+      map.get(key).push(value);
+    } else {
+      map.set(key, [value]);
+    }
+    return map;
+  }, new Map());
 
   // Load the initial page configuration, datasources, and shared page state.
   useEffect(() => {
     let statusCode = 0;
     let statusText = '';
-    fetch(`${pathPrefix}/api/page_config?l=${queryParams.l || ''}`)
+    fetch(`${pathPrefix}/api/page_config?l=${queryParams.get('l') ? queryParams.get('l')[0] : ''}`)
       .then((res) => {
         statusCode = res.status;
         statusText = res.statusText;
@@ -138,7 +145,7 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
         return res;
       })
       .then((pageConfig: PageConfig) => {
-        if (queryParams.example !== undefined) {
+        if (queryParams.get('example') !== undefined) {
           pageConfig.pageState = examplePageState;
         }
 
@@ -182,22 +189,22 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
         }
 
         // Override Prometheus server from URL for direct access.
-        if (queryParams.s) {
+        if (queryParams.get('s') && queryParams.get('s').length > 0) {
           store.dispatch(
             setServerSettings({
               access: 'direct',
               datasourceID: null,
               withCredentials: false,
-              url: queryParams.s,
-              basicAuthUsername: queryParams.u,
-              basicAuthPassword: queryParams.p,
+              url: queryParams.get('s')[0],
+              basicAuthUsername: queryParams.get('u') ? queryParams.get('u')[0] : undefined,
+              basicAuthPassword: queryParams.get('p') ? queryParams.get('p')[0] : undefined,
             })
           );
         }
 
         // Override Prometheus server from URL for proxy access.
-        if (queryParams.ds) {
-          const providedDS = pageConfig.grafanaDatasources.find((ds) => ds.id === Number(queryParams.ds));
+        if (queryParams.get('ds') && queryParams.get('ds').length > 0) {
+          const providedDS = pageConfig.grafanaDatasources.find((ds) => ds.id === Number(queryParams.get('ds')[0]));
           if (providedDS !== undefined) {
             store.dispatch(setServerSettings(grafanaDatasourceToServerSettings(providedDS)));
           } else {
@@ -206,15 +213,25 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
         }
 
         // Override the expression of the first query from the URL.
-        if (queryParams.q) {
-          store.dispatch(setExpr(0, queryParams.q));
+        if (queryParams.get('q') && queryParams.get('q').length > 0) {
+          queryParams.get('q').forEach((query: string, index: number) => {
+            if (index > 0) {
+              store.dispatch(addQuery());
+            }
+            store.dispatch(setExpr(index, query));
+          });
         }
 
         setPageConfig(pageConfig);
       })
       .catch((err) => setPageConfigError(err.message))
       .finally(() => setPageConfigLoading(false));
-  }, [queryParams.l, queryParams.s, queryParams.ds, pathPrefix]);
+  }, [
+    queryParams.get('l') ? queryParams.get('l')[0] : '',
+    queryParams.get('s') ? queryParams.get('s')[0] : '',
+    queryParams.get('ds') ? queryParams.get('ds')[0] : '',
+    pathPrefix,
+  ]);
 
   return (
     <Container fluid className="promlens-container">
@@ -233,7 +250,11 @@ const PromLens: FC<PathPrefixProps> = ({ pathPrefix }) => {
 
       {stateImportError === null && pageConfigError === null && pageConfig !== null && (
         <Provider store={store}>
-          <PromLensUI initialTrigger={!!queryParams.q} pathPrefix={pathPrefix} datasources={pageConfig.grafanaDatasources} />
+          <PromLensUI
+            initialTrigger={!!(queryParams.get('q') && queryParams.get('q').length > 0)}
+            pathPrefix={pathPrefix}
+            datasources={pageConfig.grafanaDatasources}
+          />
         </Provider>
       )}
     </Container>

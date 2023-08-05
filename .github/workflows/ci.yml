@@ -1,6 +1,6 @@
 ---
 name: CI
-on:  # yamllint disable-line rule:truthy
+on: # yamllint disable-line rule:truthy
   pull_request:
   push:
 jobs:
@@ -28,7 +28,7 @@ jobs:
       !(github.event_name == 'push' && github.event.ref == 'refs/heads/main')
     strategy:
       matrix:
-        thread: [ 0, 1, 2 ]
+        thread: [0, 1, 2]
     steps:
       - uses: actions/checkout@v3
       - uses: prometheus/promci@v0.0.2
@@ -48,7 +48,7 @@ jobs:
       (github.event_name == 'push' && github.event.ref == 'refs/heads/main')
     strategy:
       matrix:
-        thread: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+        thread: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     # Whenever the Go version is updated here, .promu.yml
     # should also be updated.
     steps:
@@ -68,7 +68,7 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v3
         with:
-          go-version: '<1.19'
+          go-version: "<1.19"
       - name: Lint
         uses: golangci/golangci-lint-action@v3.2.0
         with:

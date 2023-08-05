@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-declare namespace jquery.flot {
+namespace jquery.flot {
   interface plot extends jquery.flot.plot {
     destroy: () => void;
   }
