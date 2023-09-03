@@ -57,34 +57,84 @@ const BinaryExprExplainView: FC<BinaryExprExplainViewProps> = ({ node, promAPI }
   // Vector-scalar binops.
   if (lhs.data.resultType === 'scalar' && rhs.data.resultType === 'vector') {
     return (
-      <VectorScalarBinaryExprExplainView node={node} vector={rhs.data.result} scalar={lhs.data.result} scalarLeft={true} />
+      <>
+        <p>
+          Code level with AI:{' '}
+          <a
+            href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/binary_op.go?L14-42"
+            target="_blank"
+          >
+            VictoriaMetrics@v1.79.6
+          </a>
+          .
+        </p>
+        <hr />
+        <p>High level:</p>
+
+        <VectorScalarBinaryExprExplainView node={node} vector={rhs.data.result} scalar={lhs.data.result} scalarLeft={true} />
+      </>
     );
   }
   if (lhs.data.resultType === 'vector' && rhs.data.resultType === 'scalar') {
     return (
-      <VectorScalarBinaryExprExplainView node={node} scalar={rhs.data.result} vector={lhs.data.result} scalarLeft={false} />
+      <>
+        <p>
+          Code level with AI:{' '}
+          <a
+            href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/binary_op.go?L14-42"
+            target="_blank"
+          >
+            VictoriaMetrics@v1.79.6
+          </a>
+          .
+        </p>
+        <hr />
+        <p>High level:</p>
+
+        <VectorScalarBinaryExprExplainView
+          node={node}
+          scalar={rhs.data.result}
+          vector={lhs.data.result}
+          scalarLeft={false}
+        />
+      </>
     );
   }
 
   // Vector-vector binops.
   if (lhs.data.resultType === 'vector' && rhs.data.resultType === 'vector') {
     return (
-      <VectorVectorBinaryExprExplainView
-        // TODO: Currently in the native PromQL parser, the "VectorMatching" field can not be null
-        // for vector-vector binops, but it may be null when we create a PromLens-internal AST node
-        // in the form editor, or via a snippet, because there it would be hard to dynamically modify
-        // the binop parent when a child changes type from vector to scalar. But then we need to
-        // ensure that the "default" is filled in here before, because the explain view expects it.
-        node={{
-          ...node,
-          matching:
-            node.matching === null
-              ? { card: vectorMatchCardinality.oneToOne, include: [], labels: [], on: false }
-              : node.matching,
-        }}
-        lhs={lhs.data.result}
-        rhs={rhs.data.result}
-      />
+      <>
+        <p>
+          Code level with AI:{' '}
+          <a
+            href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/binary_op.go?L14-42"
+            target="_blank"
+          >
+            VictoriaMetrics@v1.79.6
+          </a>
+          .
+        </p>
+        <hr />
+        <p>High level:</p>
+
+        <VectorVectorBinaryExprExplainView
+          // TODO: Currently in the native PromQL parser, the "VectorMatching" field can not be null
+          // for vector-vector binops, but it may be null when we create a PromLens-internal AST node
+          // in the form editor, or via a snippet, because there it would be hard to dynamically modify
+          // the binop parent when a child changes type from vector to scalar. But then we need to
+          // ensure that the "default" is filled in here before, because the explain view expects it.
+          node={{
+            ...node,
+            matching:
+              node.matching === null
+                ? { card: vectorMatchCardinality.oneToOne, include: [], labels: [], on: false }
+                : node.matching,
+          }}
+          lhs={lhs.data.result}
+          rhs={rhs.data.result}
+        />
+      </>
     );
   }
 

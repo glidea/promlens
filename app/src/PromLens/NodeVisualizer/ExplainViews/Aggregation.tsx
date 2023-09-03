@@ -73,9 +73,246 @@ interface AggregationExplainViewProps {
 const AggregationExplainView: FC<AggregationExplainViewProps> = ({ node }) => {
   return (
     <Alert variant="secondary">
-      This node {describeAggregationType(node.op, node.param)}, {describeAggregationGrouping(node.grouping, node.without)}.
+      <p>{codes[node.op]}</p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
+        This node {describeAggregationType(node.op, node.param)}, {describeAggregationGrouping(node.grouping, node.without)}.
+      </p>
     </Alert>
   );
+};
+
+const codes: Record<string, React.ReactNode> = {
+  sum: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L179-202"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  min: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L282-298"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  max: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L300-316"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  avg: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L318-344"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  stddev: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L346-363"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  stdvar: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L365-396"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  count: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L398-415"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  group: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L163-177"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  count_values: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L533-601"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  bottomk: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L603-631"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  topk: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L603-631"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
+  quantile: (
+    <>
+      Code level with AI:{' '}
+      <a
+        href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/engine.go?L2515-2848"
+        target="_blank"
+      >
+        Prometheus@v2.46.0
+      </a>
+      ,{' '}
+      <a
+        href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/aggr.go?L1110-1121"
+        target="_blank"
+      >
+        VictoriaMetrics@v1.79.6
+      </a>
+      .
+    </>
+  ),
 };
 
 export default AggregationExplainView;

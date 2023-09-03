@@ -29,19 +29,7 @@ const ExplainView: FC<ExplainViewProps> = ({ node, promAPI }) => {
 
       return <BinaryExprExplainView node={node} promAPI={promAPI} />;
     case nodeType.call:
-      return (
-        <Alert variant="secondary">
-          <p>
-            This node calls the{' '}
-            <a href={`https://prometheus.io/docs/prometheus/latest/querying/functions/#${node.func.name}`}>
-              <span className="promql-code promql-keyword">{node.func.name}()</span>
-            </a>{' '}
-            function{node.args.length > 0 ? ' on the provided inputs' : ''}.
-          </p>
-          <hr />
-          {funcDocs[node.func.name]}
-        </Alert>
-      );
+      return <Alert variant="secondary">{funcDocs[node.func.name]}</Alert>;
     case nodeType.matrixSelector:
       return <SelectorExplainView node={node} promAPI={promAPI} />;
     case nodeType.subquery:

@@ -4,12 +4,52 @@ const funcDocs: Record<string, React.ReactNode> = {
   abs: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L723-726"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L189-191"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>abs(v instant-vector)</code> returns the input vector with all sample values converted to their absolute value.
       </p>
     </>
   ),
   absent: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L683-693"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L193-217"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>absent(v instant-vector)</code> returns an empty vector if the vector passed to it has any elements and a
         1-element vector with the value 1 if the vector passed to it has no elements.
@@ -34,6 +74,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   absent_over_time: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L695-702"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1424-1429"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>absent_over_time(v range-vector)</code> returns an empty vector if the range vector passed to it has any
         elements and a 1-element vector with the value 1 if the range vector passed to it has no elements.
@@ -62,6 +122,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   acos: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L783-786"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          target="_blank"
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2101-2103"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -129,6 +209,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   acosh: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L813-816"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          target="_blank"
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2105-2107"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -196,6 +296,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   asin: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L778-781"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2085-2087"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -263,6 +383,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   asinh: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L808-811"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2089-2091"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -330,6 +470,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   atan: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L788-791"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2093-2095"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -397,6 +557,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   atanh: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L803-806"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2097-2099"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -465,6 +645,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   avg_over_time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L452-509"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1210-1228"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
       </p>
@@ -514,6 +714,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ceil: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L728-731"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L241-243"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>ceil(v instant-vector)</code> rounds the sample values of all elements in <code>v</code> up to the nearest
         integer.
       </p>
@@ -522,6 +742,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   changes: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1126-1146"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1749-1770"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         For each input time series, <code>changes(v range-vector)</code> returns the number of times its value has changed
         within the provided time range as an instant vector.
       </p>
@@ -529,6 +769,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   clamp: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L366-381"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L245-268"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>clamp(v instant-vector, min scalar, max scalar)</code>
         clamps the sample values of all elements in <code>v</code> to have a lower limit of <code>min</code> and an upper
@@ -544,6 +804,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   clamp_max: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L383-394"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L270-287"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>clamp_max(v instant-vector, max scalar)</code> clamps the sample values of all elements in <code>v</code> to
         have an upper limit of <code>max</code>.
       </p>
@@ -552,6 +832,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   clamp_min: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L396-407"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L289-306"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>clamp_min(v instant-vector, min scalar)</code> clamps the sample values of all elements in <code>v</code> to
         have a lower limit of <code>min</code>.
       </p>
@@ -559,6 +859,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   cos: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L768-771"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2069-2071"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -626,6 +946,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   cosh: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L798-801"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2073-2075"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -694,6 +1034,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   count_over_time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L511-516"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1440-1448"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
       </p>
@@ -743,6 +1103,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   day_of_month: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1298-1303"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L333-335"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>day_of_month(v=vector(time()) instant-vector)</code> returns the day of the month for each of the given times
         in UTC. Returned values are from 1 to 31.
       </p>
@@ -750,6 +1130,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   day_of_week: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1305-1310"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L337-339"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>day_of_week(v=vector(time()) instant-vector)</code> returns the day of the week for each of the given times in
         UTC. Returned values are from 0 to 6, where 0 means Sunday etc.
@@ -759,6 +1159,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   days_in_month: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1291-1296"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L341-346"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>days_in_month(v=vector(time()) instant-vector)</code> returns number of days in the month for each of the given
         times in UTC. Returned values are from 28 to 31.
       </p>
@@ -766,6 +1186,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   deg: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L830-835"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2109-2111"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -834,6 +1274,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   delta: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L222-225"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1514-1556"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>delta(v range-vector)</code> calculates the difference between the first and last value of each time series
         element in a range vector <code>v</code>, returning an instant vector with the given deltas and equivalent labels.
         The delta is extrapolated to cover the full time range as specified in the range vector selector, so that it is
@@ -856,6 +1316,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   deriv: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L934-949"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1594-1599"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>deriv(v range-vector)</code> calculates the per-second derivative of the time series in a range vector{' '}
         <code>v</code>, using <a href="https://en.wikipedia.org/wiki/Simple_linear_regression">simple linear regression</a>.
       </p>
@@ -867,6 +1347,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   exp: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L738-741"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L349-351"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>exp(v instant-vector)</code> calculates the exponential function for all elements in <code>v</code>. Special
         cases are:
@@ -885,6 +1385,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   floor: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L733-736"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L353-355"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>floor(v instant-vector)</code> rounds the sample values of all elements in <code>v</code> down to the nearest
         integer.
       </p>
@@ -892,6 +1412,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   histogram_quantile: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1018-1093"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L854-971"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>histogram_quantile(φ scalar, b instant-vector)</code> calculates the φ-quantile (0 ≤ φ ≤ 1) from the buckets{' '}
         <code>b</code> of a<a href="https://prometheus.io/docs/concepts/metric_types/#histogram">histogram</a>. (See
@@ -956,6 +1496,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   holt_winters: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L297-346"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L827-875"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>holt_winters(v range-vector, sf scalar, tf scalar)</code> produces a smoothed value for time series based on
         the range in <code>v</code>. The lower the smoothing factor <code>sf</code>, the more importance is given to old
         data. The higher the trend factor <code>tf</code>, the more trends in the data is considered. Both <code>sf</code>{' '}
@@ -970,6 +1530,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   hour: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1319-1324"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1056-1058"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>hour(v=vector(time()) instant-vector)</code> returns the hour of the day for each of the given times in UTC.
         Returned values are from 0 to 23.
       </p>
@@ -977,6 +1557,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   idelta: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L242-245"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1570-1592"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>idelta(v range-vector)</code> calculates the difference between the last two samples in the range vector{' '}
         <code>v</code>, returning an instant vector with the given deltas and equivalent labels.
@@ -989,6 +1589,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   increase: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L232-235"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1514-1556"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>increase(v range-vector)</code> calculates the increase in the time series in the range vector. Breaks in
         monotonicity (such as counter resets due to target restarts) are automatically adjusted for. The increase is
@@ -1016,6 +1636,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   irate: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L237-240"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1638-1685"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>irate(v range-vector)</code> calculates the per-second instant rate of increase of the time series in the range
         vector. This is based on the last two data points. Breaks in monotonicity (such as counter resets due to target
@@ -1050,6 +1690,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   label_join: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1212-1269"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1630-1671"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         For each timeseries in <code>v</code>,{' '}
         <code>
           label_join(v instant-vector, dst_label string, separator string, src_label_1 string, src_label_2 string, ...)
@@ -1075,6 +1735,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   label_replace: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1148-1201"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1698-1725"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         For each timeseries in <code>v</code>,{' '}
         <code>label_replace(v instant-vector, dst_label string, replacement string, src_label string, regex string)</code>
         matches the regular expression <code>regex</code> against the value of the label <code>src_label</code>. If it
@@ -1099,6 +1779,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   last_over_time: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L518-542"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L2026-2035"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
@@ -1149,6 +1849,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ln: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L748-751"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1890-1892"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>ln(v instant-vector)</code> calculates the natural logarithm for all elements in <code>v</code>. Special cases
         are:
       </p>
@@ -1172,6 +1892,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   log10: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L758-761"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1898-1900"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>log10(v instant-vector)</code> calculates the decimal logarithm for all elements in <code>v</code>. The special
         cases are equivalent to those in <code>ln</code>.
       </p>
@@ -1180,6 +1920,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   log2: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L753-756"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1894-1896"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>log2(v instant-vector)</code> calculates the binary logarithm for all elements in <code>v</code>. The special
         cases are equivalent to those in <code>ln</code>.
       </p>
@@ -1187,6 +1947,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   max_over_time: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L544-562"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1249-1266"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
@@ -1237,6 +2017,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   min_over_time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L564-582"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1230-1247"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
       </p>
@@ -1286,6 +2086,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   minute: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1326-1331"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1902-1904"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>minute(v=vector(time()) instant-vector)</code> returns the minute of the hour for each of the given times in
         UTC. Returned values are from 0 to 59.
       </p>
@@ -1294,6 +2114,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   month: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1333-1338"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1906-1908"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>month(v=vector(time()) instant-vector)</code> returns the month of the year for each of the given times in UTC.
         Returned values are from 1 to 12, where 1 means January etc.
       </p>
@@ -1301,6 +2141,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   pi: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L837-840"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2159-2164"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -1369,6 +2229,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   predict_linear: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L951-963"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L877-894"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>predict_linear(v range-vector, t scalar)</code> predicts the value of time series
         <code>t</code> seconds from now, based on the range vector <code>v</code>, using{' '}
         <a href="https://en.wikipedia.org/wiki/Simple_linear_regression">simple linear regression</a>.
@@ -1381,6 +2261,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   present_over_time: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L704-709"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1431-1438"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
@@ -1431,6 +2331,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   quantile_over_time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L618-635"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1176-1193"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
       </p>
@@ -1479,6 +2399,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   rad: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L823-828"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2113-2115"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -1547,6 +2487,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   rate: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L227-230"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1601-1636"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>rate(v range-vector)</code> calculates the per-second average rate of increase of the time series in the range
         vector. Breaks in monotonicity (such as counter resets due to target restarts) are automatically adjusted for. Also,
         the calculation extrapolates to the ends of the time range, allowing for missed scrapes or imperfect alignment of
@@ -1579,6 +2539,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   resets: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1095-1124"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1803-1829"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         For each input time series, <code>resets(v range-vector)</code> returns the number of counter resets within the
         provided time range as an instant vector. Any decrease in the value between two consecutive samples is interpreted as
         a counter reset.
@@ -1592,6 +2572,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   round: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L409-429"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1910-1942"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>round(v instant-vector, to_nearest=1 scalar)</code> rounds the sample values of all elements in <code>v</code>{' '}
         to the nearest integer. Ties are resolved by rounding up. The optional <code>to_nearest</code> argument allows
         specifying the nearest multiple to which the sample values should be rounded. This multiple may also be a fraction.
@@ -1600,6 +2600,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   scalar: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L431-438"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1963-1986"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         Given a single-element input vector, <code>scalar(v instant-vector)</code> returns the sample value of that single
         element as a scalar. If the input vector does not have exactly one element, <code>scalar</code> will return{' '}
@@ -1610,6 +2630,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   sgn: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L842-854"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L1944-1961"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>sgn(v instant-vector)</code> returns a vector with all sample values converted to their sign, defined as this:
         1 if v is positive, -1 if v is negative and 0 if v is equal to zero.
       </p>
@@ -1617,6 +2657,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   sin: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L763-766"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2061-2063"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -1684,6 +2744,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   sinh: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L793-796"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2065-2067"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -1752,12 +2832,52 @@ const funcDocs: Record<string, React.ReactNode> = {
   sort: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L348-355"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2021-2055"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>sort(v instant-vector)</code> returns vector elements sorted by their sample values, in ascending order.
       </p>
     </>
   ),
   sort_desc: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L357-364"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2021-2055"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         Same as <code>sort</code>, but sorts in descending order.
       </p>
@@ -1766,12 +2886,52 @@ const funcDocs: Record<string, React.ReactNode> = {
   sqrt: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L743-746"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2057-2059"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>sqrt(v instant-vector)</code> calculates the square root of all elements in <code>v</code>.
       </p>
     </>
   ),
   stddev_over_time: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L637-658"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1464-1467"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
@@ -1822,6 +2982,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   stdvar_over_time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L660-681"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1469-1492"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
       </p>
@@ -1871,6 +3051,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   sum_over_time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L584-616"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1355-1370"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         The following functions allow aggregating each series of a given range vector over time and return an instant vector
         with per-series aggregation results:
       </p>
@@ -1919,6 +3119,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   tan: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L773-776"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2077-2079"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -1986,6 +3206,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   tanh: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L803-806"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2081-2083"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>The trigonometric functions work in radians:</p>
 
       <ul>
@@ -2054,6 +3294,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   time: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L56-61"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2228-2233"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>time()</code> returns the number of seconds since January 1, 1970 UTC. Note that this does not actually return
         the current time, but the time at which the expression is to be evaluated.
       </p>
@@ -2061,6 +3321,26 @@ const funcDocs: Record<string, React.ReactNode> = {
   ),
   timestamp: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L856-866"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/rollup.go?L1321-1332"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>timestamp(v instant-vector)</code> returns the timestamp of each of the samples of the given vector as the
         number of seconds since January 1, 1970 UTC.
@@ -2074,12 +3354,52 @@ const funcDocs: Record<string, React.ReactNode> = {
   vector: (
     <>
       <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1203-1210"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2235-2242"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
+      <p>
         <code>vector(s scalar)</code> returns the scalar <code>s</code> as a vector with no labels.
       </p>
     </>
   ),
   year: (
     <>
+      <p>
+        Code level with AI:{' '}
+        <a
+          href="https://sourcegraph.com/github.com/prometheus/prometheus@v2.46.0/-/blob/promql/functions.go?L1340-1345"
+          target="_blank"
+        >
+          Prometheus@v2.46.0
+        </a>
+        ,{' '}
+        <a
+          href="https://sourcegraph.com/github.com/VictoriaMetrics/VictoriaMetrics@v1.79.6/-/blob/app/vmselect/promql/transform.go?L2244-2246"
+          target="_blank"
+        >
+          VictoriaMetrics@v1.79.6
+        </a>
+        .
+      </p>
+      <hr />
+      <p>High level:</p>
+
       <p>
         <code>year(v=vector(time()) instant-vector)</code> returns the year for each of the given times in UTC.
       </p>
